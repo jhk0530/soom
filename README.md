@@ -1,10 +1,18 @@
 # soom
 
-바탕화면 아이콘 숨기기 + 메뉴 막대 자동 숨기기.
+바탕화면 아이콘 숨기기 + 메뉴 막대 자동 숨기기
 
 https://github.com/user-attachments/assets/90f4fcb1-63d5-4746-b47a-d32fb0ece33a
 
+## 아이콘
+
+<img width="50%" src="https://github.com/user-attachments/assets/c8cb8506-c1c9-4a68-b0d8-025ca04f5be1" />
+
 ## 사용법
+
+0. Releases > zip 파일 (Source Code 말고) 다운로드 > 압축 풀기 > soomsoom.app 실행
+
+<img width="241" height="140" alt="스크린샷 2026-10-03 오후 2 59 42" src="https://github.com/user-attachments/assets/5589f7c1-8659-42ea-9351-4ef0cd22281e" />
 
 1. 아이콘 클릭 
 - 메뉴 막대 숨김
@@ -18,7 +26,6 @@ https://github.com/user-attachments/assets/90f4fcb1-63d5-4746-b47a-d32fb0ece33a
 
 - ‘바탕화면 아이콘 표시’: 체크하면 표시, 해제하면 숨김.
 - 메뉴 막대 ‘항상’ / ‘전체 화면일 때만’: 원하는 항목을 선택하면 체크 이동.
-- 메뉴 막대 설정 다시 적용, 정보, 종료도 제공합니다.
 
 ## 수정
 
