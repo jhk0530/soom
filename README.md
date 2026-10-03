@@ -2,6 +2,8 @@
 
 바탕화면 아이콘 숨기기 + 메뉴 막대 자동 숨기기.
 
+https://github.com/user-attachments/assets/90f4fcb1-63d5-4746-b47a-d32fb0ece33a
+
 ## 사용법
 
 1. 아이콘 클릭 
