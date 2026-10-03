@@ -77,6 +77,8 @@ struct MenuBarSettings {
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     private var statusItem: NSStatusItem!
+    private lazy var catIcon = loadStatusIcon("cat-visible")
+    private lazy var wallIcon = loadStatusIcon("wall-only")
     private let menu = NSMenu()
     private let desktopStore = PreferenceStore(domain: "com.apple.finder" as CFString)
     private var refreshTimer: Timer?
@@ -214,15 +216,23 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         refresh()
     }
 
+    private func loadStatusIcon(_ name: String) -> NSImage? {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "png", subdirectory: "StatusIcons"),
+              let image = NSImage(contentsOf: url) else {
+            return NSImage(systemSymbolName: "menubar.rectangle", accessibilityDescription: "soom")
+        }
+        image.size = NSSize(width: 20, height: 20)
+        image.isTemplate = false
+        return image
+    }
+
     private func refresh() {
         let visible = desktopVisible
         let hide = MenuBarSettings.hidesOnDesktop
         let fullscreenVisible = MenuBarSettings.store.read("AppleMenuBarVisibleInFullscreen") ?? false
         let menuAction = hide ? "전체 화면일 때만 자동 가리기" : "항상 자동 가리기"
-        // One stable soom icon; the context menu carries the individual states.
-        let image = NSImage(systemSymbolName: "eyeglasses", accessibilityDescription: "soom")
-        image?.isTemplate = true
-        statusItem.button?.image = image
+        // Keep both images on the same canvas so the wall does not move on toggle.
+        statusItem.button?.image = hide ? wallIcon : catIcon
         statusItem.button?.toolTip = "soom · 메뉴 막대: \(MenuBarSettings.label)\n클릭: \(menuAction) · 오른쪽 클릭: 설정"
         statusItem.button?.setAccessibilityLabel("soom, 메뉴 막대 \(MenuBarSettings.label), 클릭하면 \(menuAction)")
         desktopToggleItem.state = visible ? .on : .off
@@ -243,7 +253,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         NSApp.activate(ignoringOtherApps: true)
         NSApp.orderFrontStandardAboutPanel([
             NSApplication.AboutPanelOptionKey.applicationName: "soom",
-            NSApplication.AboutPanelOptionKey.applicationVersion: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.3",
+            NSApplication.AboutPanelOptionKey.applicationVersion: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.4",
             NSApplication.AboutPanelOptionKey.credits: NSAttributedString(string: "클릭으로 메뉴 막대를 전환하고, 오른쪽 클릭으로 바탕화면과 메뉴 막대를 설정하세요.")
         ])
     }

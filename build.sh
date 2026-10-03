@@ -9,6 +9,7 @@ xcrun swiftc -parse-as-library soomsoom/sooomApp.swift \
     -default-isolation MainActor -target arm64-apple-macos26.2 -O \
     -framework SwiftUI -framework AppKit -o "$SOOM_APP/Contents/MacOS/soom"
 cp soomsoom/AppIcon.icns "$SOOM_APP/Contents/Resources/AppIcon.icns"
+cp -R soomsoom/StatusIcons "$SOOM_APP/Contents/Resources/"
 cat > "$SOOM_APP/Contents/Info.plist" <<'PLIST'
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -19,8 +20,8 @@ cat > "$SOOM_APP/Contents/Info.plist" <<'PLIST'
 <key>CFBundleDisplayName</key><string>soom</string>
 <key>CFBundlePackageType</key><string>APPL</string>
 <key>CFBundleIconFile</key><string>AppIcon</string>
-<key>CFBundleVersion</key><string>3</string>
-<key>CFBundleShortVersionString</key><string>0.3</string>
+<key>CFBundleVersion</key><string>4</string>
+<key>CFBundleShortVersionString</key><string>0.4</string>
 <key>LSMinimumSystemVersion</key><string>26.2</string>
 <key>LSUIElement</key><true/>
 <key>NSHighResolutionCapable</key><true/>

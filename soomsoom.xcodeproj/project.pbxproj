@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+        A014CA700000000000000001 /* StatusIcons in Resources */ = {isa = PBXBuildFile; fileRef = A014CA700000000000000002 /* StatusIcons */; };
 		9DD24FC72F359CF600A09491 /* sooomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD24FC52F359CF600A09491 /* sooomApp.swift */; };
 		9DD24FC92F359CF600A09491 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9DD24FC22F359CF600A09491 /* AppIcon.icns */; };
 		9DD24FCA2F359CF600A09491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD24FC32F359CF600A09491 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+        A014CA700000000000000002 /* StatusIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = StatusIcons; sourceTree = "<group>"; };
 		9D9B6FB92F349665003EAA3C /* soomsoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = soomsoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD24FC22F359CF600A09491 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		9DD24FC32F359CF600A09491 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +52,8 @@
 		9DD24FC62F359CF600A09491 /* soomsoom */ = {
 			isa = PBXGroup;
 			children = (
-				9DD24FC22F359CF600A09491 /* AppIcon.icns */,
+				A014CA700000000000000002 /* StatusIcons */,
+                9DD24FC22F359CF600A09491 /* AppIcon.icns */,
 				9DD24FC32F359CF600A09491 /* Assets.xcassets */,
 				9DD24FC42F359CF600A09491 /* Info.plist */,
 				9DD24FC52F359CF600A09491 /* sooomApp.swift */,
@@ -119,7 +122,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DD24FC92F359CF600A09491 /* AppIcon.icns in Resources */,
+				A014CA700000000000000001 /* StatusIcons in Resources */,
+                9DD24FC92F359CF600A09491 /* AppIcon.icns in Resources */,
 				9DD24FCA2F359CF600A09491 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +271,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2NTSYMUX28;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -292,7 +296,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = jhk0530.soomsoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -315,7 +319,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2NTSYMUX28;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -340,7 +344,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = jhk0530.soomsoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
